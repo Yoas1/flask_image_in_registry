@@ -8,4 +8,4 @@ docker run -d -p 5001:5000 -e REG=</server-ip/>:</port/> yoas1/images-in-registr
 ```
 
 ### Demo
-![Alt text](/posts/path/to/img.jpg "DEMO!")
+![DEMO!](https://github.com/Yoas1/flask_image_in_registry/blob/main/demo/demo.jpg "DEMO!")
