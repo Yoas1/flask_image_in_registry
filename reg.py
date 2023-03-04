@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-from os import popen
+from os import popen, environ
 import json
 
 
 app = Flask(__name__)
-registry = '<ip>:<port>'
+registry = environ['REG']
 
 
 @app.route('/')
@@ -25,7 +25,6 @@ def list_images():
         for tags in tag:
             tag_list.append(image + ':' + tags)
         images_list.append(tag_list)
-    print(images_list)
     return render_template('index.html', images_list=images_list, registry=registry)
 
 if __name__ == 'main':

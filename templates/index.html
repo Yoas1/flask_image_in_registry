@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+{% extends 'base.html' %}
+
+{% block content %}
   <head>
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'bootstrap.min.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  {% block content %}
   <style>
     h1 {text-align: center;}
     h3 {text-align: center;}
@@ -14,7 +16,6 @@
 </style>
  <body>
 
-    <h1>All Registry Images</h1><br>
     <h3>For pull images use: {{ registry }}/<-image->/<-tag-></h3>
 
     {% for post in images_list %}
